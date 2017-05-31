@@ -1,0 +1,2 @@
+Programm to parse Reverse Polish notation;
+Task from JAVA1 Prometheus course.
