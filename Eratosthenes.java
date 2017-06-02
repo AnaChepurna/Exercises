@@ -1,6 +1,5 @@
 package FilteringCollection;
 
-import java.time.chrono.Era;
 import java.util.ArrayList;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -20,7 +19,7 @@ public class Eratosthenes {
     public int getFirst(int i) {
          int first = list
                 .stream()
-                 .skip(i)
+                .skip(i)
                 .findFirst()
                 .get();
          return first;
