@@ -9,26 +9,9 @@ import java.util.List;
 
 /*
 Все работает и без проблем принимается валидатором.
-Реализована возможность добавлять элемент на место удаленного.
+После удаления элемента остается доступ к его дочерним веткам до момента, когда будет записан новый элемент на место удаленного.
 
 Построй дерево
-
-Класс описывающий дерево мы создали, теперь нужен класс описывающий тип элементов дерева:
-1.  В классе CustomTree создай вложенный статический параметризированный класс Entry<T> с модификатором доступа по умолчанию.
-2. Обеспечь поддержку этим классом интерфейса Serializable.
-3. Создай такие поля (модификатор доступа по умолчанию):
-— String elementName;
-— int lineNumber;
-— boolean availableToAddLeftChildren, availableToAddRightChildren;
-— Entry<T> parent, leftChild, rightChild;
-4. Реализуй публичный конструктор с одним параметром типа String:
-— установи поле elementName равным полученному параметру;
-— установи поле availableToAddLeftChildren равным true;
-— установи поле availableToAddRightChildren равным true;
-5. Реализуй метод void checkChildren, устанавливающий поле availableToAddLeftChildren в false, если leftChild не равен null и availableToAddRightChildren в false, если rightChild не равен null.
-6. Реализуй метод boolean isAvailableToAddChildren, возвращающий дизъюнкцию полей availableToAddLeftChildren и availableToAddRightChildren.
-
-Любое дерево начинается с корня, поэтому не забудь в класс CustomTree добавить поле root типа Entry<String> c модификатором доступа по умолчанию.
 */
 public class CustomTree extends AbstractList<String> implements Cloneable, Serializable{
     public static void main(String[] args) {
