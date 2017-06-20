@@ -168,9 +168,7 @@ public class CustomTree extends AbstractList<String> implements Cloneable, Seria
             else {
                 entry.parent.availableToAddRightChildren = true;
             }
-            if (entry.leftChild != null)
                 entry.leftChild.parent = null;
-            if (entry.rightChild != null)
                 entry.rightChild.parent = null;
             return true;
         }
