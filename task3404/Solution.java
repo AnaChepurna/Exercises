@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.recursion("cos(30 - (30^2)/30 + 30 - 15*2)", 0); //expected output 0.5 6
+        solution.recursion("sin(2*(-5+1.5*4)+28)", 0); //expected output 0.5 6
     }
 
     public void recursion(final String expression, int countOperation) {
