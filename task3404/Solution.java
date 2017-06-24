@@ -18,7 +18,8 @@ public class Solution {
     public void recursion(final String expression, int countOperation) {
         try {
             Double res = Double.parseDouble(expression);
-            System.out.println((String.format(Locale.ENGLISH,"%(.1f", res) + " " + countOperation));
+            res = BigDecimal.valueOf(res).setScale(2,BigDecimal.ROUND_HALF_DOWN).doubleValue();
+            System.out.println(res+ " " + countOperation);
         }
         catch (Exception ex){
             String startExpression = expression;
