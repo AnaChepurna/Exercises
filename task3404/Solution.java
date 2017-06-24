@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 
 /*
 Рекурсия для мат. выражения
+
+Все работает идеально, но валидатором не принимается. Буду рада узнать валидное решение этой задачи)
 */
 public class Solution {
     public static void main(String[] args) {
