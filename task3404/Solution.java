@@ -6,17 +6,20 @@ import java.util.regex.Pattern;
 
 /*
 Рекурсия для мат. выражения
+
+Все работает идеально, но валидатором не принимается. Буду рада узнать валидное решение этой задачи)
 */
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.recursion("cos(30 - (30^2)/30 + 30 - 15*2)", 0); //expected output 0.5 6
+        solution.recursion("sin(2*(-5+1.5*4)+28)", 0); //expected output 0.5 6
     }
 
     public void recursion(final String expression, int countOperation) {
         try {
             Double res = Double.parseDouble(expression);
-            System.out.println((String.format(Locale.ENGLISH,"%(.1f", res) + " " + countOperation));
+            res = BigDecimal.valueOf(res).setScale(2,BigDecimal.ROUND_HALF_DOWN).doubleValue();
+            System.out.println(res+ " " + countOperation);
         }
         catch (Exception ex){
             String startExpression = expression;
