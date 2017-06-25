@@ -37,7 +37,25 @@ public class Hippodrome {
         for (int i = 0; i < 10; i++)
             System.out.println();
     }
+    
+    public Horse getWinner(){
+       Horse winner = null;
+       double maxDistance = 0;
 
+       for (Horse d: getHorses())
+       {
+          if (d.getDistance() > maxDistance){
+              winner = d;
+              maxDistance = d.getDistance();
+          }
+       }
+       return winner;
+   }
+   public void printWinner()
+   {
+       System.out.println("Winner is " + getWinner().getName() + "!");
+   }
+    
     public static void main(String[] args) throws InterruptedException {
         game = new Hippodrome(new ArrayList<>());
         Horse h1 = new Horse("Jo", 3,0);
@@ -48,5 +66,6 @@ public class Hippodrome {
         game.getHorses().add(h3);
 
         game.run();
+        game.printWinner();
     }
 }
